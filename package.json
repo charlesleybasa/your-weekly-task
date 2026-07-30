@@ -1,0 +1,7 @@
+{
+  "name": "momentum-web",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Flutter web assets are already generated in build/web'"
+  }
+}

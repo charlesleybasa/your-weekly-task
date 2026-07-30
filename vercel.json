@@ -2,11 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "build/web/**",
+      "src": "package.json",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/(.*\\.(?:css|js|png|jpg|jpeg|svg|ico|json|wasm|map|html|txt))", "dest": "/build/web/$1" },
+    { "src": "/(.*)", "dest": "/build/web/index.html" }
   ]
 }
