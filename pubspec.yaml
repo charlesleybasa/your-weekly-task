@@ -1,0 +1,50 @@
+name: momentum
+description: A gamified weekly kanban task manager with a built-in focus timer.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  # 3.29 is the floor for `Color.withValues` and the `CardThemeData` /
+  # `DialogThemeData` theme properties used in core/theme/app_theme.dart.
+  sdk: ">=3.7.0 <4.0.0"
+  flutter: ">=3.29.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Routing
+  go_router: ^14.2.7
+
+  # Local persistence (maintained community fork of Hive)
+  hive_ce: ^2.0.0
+  hive_ce_flutter: ^2.0.0
+  shared_preferences: ^2.3.2
+
+  # Presentation
+  google_fonts: ^6.2.1
+
+  # Platform services
+  flutter_local_notifications: ^17.2.3
+  # Declared explicitly (rather than relied on transitively) because
+  # NotificationService constructs TZDateTime values directly.
+  timezone: ^0.9.4
+  audioplayers: ^6.1.0
+
+  # Utilities
+  intl: ">=0.18.0 <0.21.0"
+  uuid: ^4.5.1
+  collection: ^1.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/
